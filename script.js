@@ -1,41 +1,3 @@
-function updateLines() {
-  const quotesPanel = document.getElementById('quotes-panel');
-  const conceptsPanel = document.getElementById('panel1');
-
-  if (!quotesPanel || !conceptsPanel) {
-    console.warn('One or both panels not found.');
-    return;
-  }
-
-  const rectQuotes = quotesPanel.getBoundingClientRect();
-  const rectConcepts = conceptsPanel.getBoundingClientRect();
-  const viewportWidth = window.innerWidth;
-
-  // Only connect lines when both panels are partially visible
-  const quotesVisible = rectQuotes.right > 0 && rectQuotes.left < viewportWidth;
-  const conceptsVisible = rectConcepts.right > 0 && rectConcepts.left < viewportWidth;
-
-  if (!(quotesVisible && conceptsVisible)) {
-    // Hide lines if one or both panels are offscreen
-    ['line-eyal', 'line-saba', 'line-samia'].forEach(id => {
-      const line = document.getElementById(id);
-      if (line) line.style.opacity = '0';
-    });
-    return;
-  }
-
-  // Show lines and connect elements
-  ['line-eyal', 'line-saba', 'line-samia'].forEach(id => {
-    const line = document.getElementById(id);
-    if (line) line.style.opacity = '1';
-  });
-
-  connectElements('line-eyal', 'quote-eyal', 'concept-eyal');
-  connectElements('line-saba', 'quote-saba', 'concept-saba');
-  connectElements('line-samia', 'quote-samia1', 'concept-samia');
-}
-
-
 // === LINE CONNECTION LOGIC ===
 function getAbsoluteCenter(el) {
   const rect = el.getBoundingClientRect();
@@ -58,14 +20,45 @@ function connectElements(lineId, elemId1, elemId2) {
   const pos1 = getAbsoluteCenter(elem1);
   const pos2 = getAbsoluteCenter(elem2);
 
-  console.log(`${lineId}:`, pos1, pos2); 
-
   line.setAttribute('x1', pos1.x);
   line.setAttribute('y1', pos1.y);
   line.setAttribute('x2', pos2.x);
   line.setAttribute('y2', pos2.y);
 }
 
+function updateLines() {
+  const quotesPanel = document.getElementById('quotes-panel');
+  const conceptsPanel = document.getElementById('panel1');
+
+  if (!quotesPanel || !conceptsPanel) {
+    console.warn('One or both panels not found.');
+    return;
+  }
+
+  const rectQuotes = quotesPanel.getBoundingClientRect();
+  const rectConcepts = conceptsPanel.getBoundingClientRect();
+  const viewportWidth = window.innerWidth;
+
+  const quotesVisible = rectQuotes.right > 0 && rectQuotes.left < viewportWidth;
+  const conceptsVisible = rectConcepts.right > 0 && rectConcepts.left < viewportWidth;
+
+  if (!(quotesVisible && conceptsVisible)) {
+    ['line-eyal', 'line-saba', 'line-samia'].forEach(id => {
+      const line = document.getElementById(id);
+      if (line) line.style.opacity = '0';
+    });
+    return;
+  }
+
+  ['line-eyal', 'line-saba', 'line-samia'].forEach(id => {
+    const line = document.getElementById(id);
+    if (line) line.style.opacity = '1';
+  });
+
+  connectElements('line-eyal', 'quote-eyal', 'concept-eyal');
+  connectElements('line-saba', 'quote-saba', 'concept-saba');
+  connectElements('line-samia', 'quote-samia1', 'concept-samia');
+}
 
 // === PANEL AND INTERACTION LOGIC ===
 document.addEventListener('DOMContentLoaded', () => {
@@ -154,27 +147,3 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-// === LINE POSITIONING & FADE-IN ON LOAD ===
-window.addEventListener('load', () => {
-  console.log('Page loaded');
-  updateLines(); // Initial line position
-
-  setTimeout(() => {
-    console.log('Fading lines in');
-    ['line-eyal', 'line-saba', 'line-samia'].forEach(id => {
-      const line = document.getElementById(id);
-      if (line) {
-        line.style.transition = 'opacity 1.5s ease-in-out';
-        line.style.opacity = '1';
-      }
-    });
-  }, 100);
-});
-const bothPanelsVisible = () => {
-  const rectQuotes = document.getElementById('quotes-panel').getBoundingClientRect();
-  const rectConcepts = document.getElementById('panel1').getBoundingClientRect();
-  return rectQuotes.right > 0 && rectConcepts.left < window.innerWidth;
-};
-
-window.addEventListener('resize', updateLines);
-window.addEventListener('scroll', updateLines);
