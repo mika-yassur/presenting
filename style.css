@@ -10,7 +10,7 @@ html, body {
     overflow-x: auto;
     overflow-y: hidden;
     font-family: "Times New Roman", Times, serif;
-    font-size: 12pt;
+    font-size: 14pt;
     background-color: #f0f0f0;
 }
 
@@ -78,7 +78,7 @@ html, body {
     display: flex;
     flex-direction: column;
     margin-top: 1em;
-    font-size: 12pt;
+    font-size: 14pt;
 }
 
 .follow-up span {
@@ -128,7 +128,7 @@ html, body {
 .quote {
     position: absolute;
     max-width: 30%;
-    font-size: 10pt;
+    font-size: 12pt;
     opacity: 0;
      transition: opacity 2s ease-in; /* slow fade */
 }
@@ -186,7 +186,7 @@ html, body {
 }
 
 #panel1 .concept {
-    font-size: 12;
+    font-size: 14;
     color: #333;
     position: relative;
 }
@@ -205,7 +205,7 @@ html, body {
 }
 
 #panel1 .intro-text {
-  font-size: 12pt;
+  font-size: 14pt;
   top: 40%;
   margin-bottom: 20px;
   color: #333;
@@ -218,7 +218,7 @@ html, body {
 }
 
 #panel1 .concept {
-  font-size: 12pt;
+  font-size: 14pt;
   color: #333;
   position: relative;
 }
@@ -226,7 +226,7 @@ html, body {
 .extended-paragraph {
   max-width: 60%;
   margin-top: 2em;
-  font-size: 12pt;
+  font-size: 14pt;
   color: #444;
   opacity: 0;
   transition: opacity 1.5s ease;
@@ -243,7 +243,7 @@ html, body {
   left: 10%;
   top: 25%;
   max-width: 60%;
-  font-size: 12pt;
+  font-size: 14pt;
   color: #333;
   opacity: 1;
   transition: opacity 2s ease;
@@ -277,7 +277,7 @@ html, body {
   left: 10%;
   top: 15%; /* You can adjust this value to move text lower or higher */
   max-width: 60%;
-  font-size: 12pt;
+  font-size: 14pt;
   color: #333;
   opacity: 1;
   transition: opacity 2s ease;
@@ -288,7 +288,7 @@ html, body {
 }
 #panel-materialities .text-content .lower-paragraph {
   margin-top: 3em;  /* adjust spacing to your liking */
-  font-size: 12pt;
+  font-size: 14pt;
   color: #333;
 }
 
@@ -319,7 +319,7 @@ html, body {
   top: 20%;
   left: 10%;
   max-width: 60%;
-  font-size: 12pt;
+  font-size: 14pt;
   color: #333;
 }
 
@@ -335,7 +335,7 @@ html, body {
   transition: opacity 1.5s ease, transform 1.5s ease;
   margin-top: 5em; /* more spacing below the first paragraph */
   max-width: 60%;
-  font-size: 12pt;
+  font-size: 14pt;
   color: #333;
   position: relative;
 }
@@ -381,10 +381,10 @@ html, body {
   transform: translateY(20px);
   transition: opacity 1.5s ease, transform 1.5s ease;
   position: absolute;
-  top: 21%;
+  top: 18%;
   left: 25%;
   max-width: 60%;
-  font-size: 12pt;
+  font-size: 14pt;
   color: #333;
 }
 .text-content p {
