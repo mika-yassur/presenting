@@ -146,4 +146,3 @@ document.addEventListener('DOMContentLoaded', () => {
     console.warn("🚫 mountain-path or scroll-thumb not found in DOM");
   }
 });
-
