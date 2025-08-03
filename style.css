@@ -550,6 +550,70 @@ body {
   border-radius: 4px;
 }
 
+#panel-image-panel {
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  overflow: hidden;
+}
+
+#panel-image-panel .image-only {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+#panel-image-panel img {
+  max-width: 85%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+#panel-image-panel img {
+  opacity: 0;
+  animation: fadeInImage 2s ease 1 forwards;
+  animation-delay: 1s; /* Adjust as needed */
+}
+
+@keyframes fadeInImage {
+  to {
+    opacity: 1;
+  }
+}
+
+#panel-image-panel {
+  margin-left: -5vw; /* or -20vw, adjust as needed */
+}
+#panel-image-panel .image-only {
+  padding-top: 5vh; /* or adjust to your liking */
+}
+
+#panel-final .text-content {
+  display: flex;
+  flex-direction: row;         /* make content horizontal */
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;                  /* limit total width */
+  max-width: 1000px;
+  gap: 4em;
+}
+
+#panel-final .final-text {
+  flex: 1;
+}
+
+#panel-final .final-image {
+  flex-shrink: 0;
+}
+
+#panel-final .final-image img {
+  max-width: 100%;
+  height: auto;
+  max-height: 60vh;
+  display: block;
+  object-fit: contain;
+}
+
+
 
 
 
