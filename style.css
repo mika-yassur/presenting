@@ -44,6 +44,12 @@ html, body {
   opacity: 1;
 }
 
+#panel-main .author-name {
+    margin-top: 20em; /* push the name downward */
+    font-size: 0.9em; /* optional size tweak */
+    color: #333;
+}
+
 .spacer-panel {
   width: 30vw; /* or 100vw for a full extra panel of space */
   flex-shrink: 0;
@@ -439,16 +445,6 @@ body {
 .text-content p {
   margin-bottom: 2rem;
 }
-#scroll 
-#mountain-scrollbar {
-  position: fixed;
-  bottom: 40px;
-  left: 5%;
-  width: 90%;
-  height: 60px;
-  z-index: 999;
-  pointer-events: none;
-}
 
 
 #scroll-thumb {
@@ -613,6 +609,28 @@ body {
   object-fit: contain;
 }
 
+.captioned-image {
+  position: relative;
+  display: inline-block;
+  text-align: right;
+  max-width: 90vw;
+}
+
+.captioned-image img {
+  display: block;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.captioned-image figcaption {
+  margin-top: 0.5em;
+  font-size: 0.85em;
+  color: #444;
+  font-style: italic;
+  text-align: right;
+}
 
 
 
