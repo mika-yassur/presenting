@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Mika Yassur Project Sketch</title>
     <link rel="stylesheet" href="style.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+
 </head>
 <body>
     <div class="container">
@@ -16,7 +18,6 @@
     <p class="author-name"><em>Mika Yassur</em></p>
   </div>
 </section>
-
 
                 <!-- New Panel: Question about colonizing viewpoints -->
 <section class="panel" id="panel-colonial-question">
@@ -49,7 +50,6 @@
             <span>Pixelated?</span>
             <span>Blurred?</span>
             <span>Reshaped?</span>
-            <span>Censored?</span>
         </p>
     </div>
 </section>
@@ -98,7 +98,7 @@
 </p>
 
 <p class="quote" id="quote-moten">
-  “Fanon, according to Moten, wants not the end to colonialism but the end of the standpoint from which colonialism makes <span class="highlight">sense</span>”
+  “Fanon, according to Moten, wants not the end of colonialism but the end of the standpoint from which colonialism makes <span class="highlight">sense</span>”
   <br><span class="attribution">(Jack Halberstam in Fred Moten and Stefano Harney's <em>The Undercommons</em>, 5)</span>
 </p>
 
@@ -107,27 +107,26 @@
 
 <section class="panel" id="panel-image-panel">
   <div class="text-content image-only">
-    <img src="panel2.png" alt="Panel image" />
+    <img src="panel3.png" alt="Panel image" />
   </div>
 </section>
 
+<section class="panel" id="nodal">
+    <div class="network_wrap"> <svg id="network"></svg></div>
+</section>
 
-<div class="panel spacer-panel"></div>
 
 <section class="panel" id="panel-keywords">
   <div class="text-content keyword-list">
     <ul>
-      <li><em>practice</em></li>
-      <li><em>study</em></li>
-      <li class="with-line"><em>rehearse</em></li>
-      <li><em>project</em></li>
+
+      <li class="with-line"></li>
+
     </ul>
   </div>
 </section>
 
-<!-- <section class="panel" id="panel-territories">
-  <img src="territories_edited.png" alt="Territories" class="full-screen-image" />
-</section>-->
+
 
 <!-- Corrected and now visible 
 <section class="panel" id="panel-cartography">
@@ -157,9 +156,9 @@
     <p>
       I am interested in exploring materialities, creative cartographies, topographical lines, ecological transformations (can fermentation be political? can burning? can growth?), through art, investigation, repetition, writing, mapping, and sensing of all kinds.
     </p>
-    <p>
+   <!--<p>
       More specifically I am interested in GIS, composites of satellite images, LiDAR, projectors, the interplay between the digital and non digital. 
-    </p>
+    </p>-->
   </div>
 </section>
 <!--
@@ -197,23 +196,30 @@
     <p> 
       IV. a rehearsal 
     </p>
-    <div class="final-image">
+
+   <figure class="final-image">
       <img src="soil_topography.png" alt="Soil Topography Image" />
-    </div>
-    <div class="final-image">
+      <figcaption style="font-size: 0.7em; color: #444;; text-align: right; font-style: italic; margin-top: 0.5em;">
+        Speculative soil topography <br>  </br></figcaption>
+      </figcaption>
+    </figure>
+
+    <figure class="final-image">
       <img src="farmer_dirt.jpg" alt="Farmer with Dirt" />
-    </div>
-    <div class="final-image">
-      <img src="hollow_land.png" alt="Hollow Land" />
-    </div>
+      <figcaption style="font-size: 0.7em; color: #444; text-align: right; font-style: italic; margin-top: 0.5em;">
+        Confiscated farmers land located in the town of Dura Al Qare' – near Ramallah. <br>From The Palestinian Museum Digital Archive.</br></figcaption>
+      </figcaption>
+    </figure>
   </div>
 </section>
+
 
 
 <div class="panel spacer-panel"></div>
 
 
     <script src="script.js"></script>
+    <script src="script3.js"></script>
 
 
 </body>
